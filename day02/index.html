@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Xinder Landing Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body class="antialiased">
+    <nav class="bg-[#8A1433] px-4 py-4 flex justify-between items-center">
+        <div class="text-white font-bold text-3xl">xinder</div>
+        <div class="hidden md:flex items-center space-x-6">
+            <a href="#" class="text-white hover:text-gray-200 transition">Explore</a>
+            <a href="#" class="text-white hover:text-gray-200 transition">Solutions</a>
+            <a href="#" class="text-white hover:text-gray-200 transition">Articles</a>
+            <a href="#" class="text-white hover:text-gray-200 transition">Sign In</a>
+            <a href="#"
+                class="px-4 py-2 border border-white rounded-lg text-white hover:bg-white hover:text-black transition">Join
+                Now</a>
+        </div>
+        <div class="md:hidden">
+            <button id="hamburger" class="focus:outline-none">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+
+        <div id="mobileMenu"
+            class="fixed inset-0 bg-black/50 backdrop-blur-sm hidden flex justify-center items-center z-40">
+            <div class="bg-transparent text-white flex flex-col items-center space-y-6 text-lg">
+                <a href="#" class="hover:text-gray-300">Explore</a>
+                <a href="#" class="hover:text-gray-300">Solutions</a>
+                <a href="#" class="hover:text-gray-300">Articles</a>
+                <a href="#" class="hover:text-gray-300">Sign In</a>
+                <a href="#"
+                    class="px-6 py-2 border border-white rounded-lg hover:bg-white hover:text-black transition">Join
+                    Now</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="bg-[#8A1433] w-full flex flex-col md:flex-row items-center justify-between px-6 md:px-12">
+        <div class="text-white w-full md:w-1/2 flex flex-col">
+            <h1 class="text-3xl sm:text-5xl font-extrabold leading-tight mb-6">
+                Search the work of <br class="hidden sm:block" /> the best artists
+            </h1>
+
+            <div class="flex flex-col sm:flex-row w-full mb-6">
+                <input type="text" placeholder="Search for artists, work name, or category"
+                    class="flex-1 px-4 py-3 rounded-t-md sm:rounded-l-md sm:rounded-tr-none mb-2 sm:mb-0 text-gray-700 focus:outline-none" />
+                <button
+                    class="bg-[#b01c3b] px-6 py-3 rounded-b-md sm:rounded-r-md sm:rounded-tl-none font-medium hover:bg-[#9c1934]">Search</button>
+            </div>
+
+            <div class="flex flex-wrap gap-2">
+                <button class="px-3 py-1 border border-white rounded-md text-sm hover:bg-white/10">Oil Painting</button>
+                <button class="px-3 py-1 border border-white rounded-md text-sm hover:bg-white/10">Abstract Art</button>
+                <button class="px-3 py-1 border border-white rounded-md text-sm hover:bg-white/10">Sculpture</button>
+                <button class="px-3 py-1 border border-white rounded-md text-sm hover:bg-white/10">Art Deco</button>
+                <button class="px-3 py-1 border border-white rounded-md text-sm hover:bg-white/10">Pop Art</button>
+            </div>
+        </div>
+
+        <div class="w-full md:w-1/2 flex justify-center md:justify-end  md:mb-0">
+            <img src="images/Col.png" class="max-h-[450px] w-full md:w-auto object-cover rounded-lg" />
+        </div>
+    </section>
+
+
+    <section class="bg-white py-12">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-8 items-center text-center">
+                <div>
+                    <img src="images/l1.png" class="h-8 mx-auto">
+                </div>
+                <div>
+                    <img src="images/l2.png" class="h-8 mx-auto">
+                </div>
+                <div>
+                    <img src="images/l3.png" class="h-8 mx-auto">
+                </div>
+                <div>
+                    <img src="images/l4.png" class="h-8 mx-auto">
+                </div>
+                <div>
+                    <img src="images/l5.png" class="h-8 mx-auto">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="px-6 md:px-16 py-12 bg-white">
+        <div class="flex justify-between items-center mb-8">
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-900">Featured art categories</h2>
+            <a href="#" class="text-blue-600 font-medium flex items-center hover:underline">
+                View All Categories →
+            </a>
+        </div>
+        <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-5">
+            <div class="relative rounded-lg overflow-hidden shadow">
+                <img src="images/im1.jpg" class="w-full h-72 object-cover">
+                <div class="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-start p-4 text-white">
+                    <span class="text-sm">Pottery</span>
+                    <h3 class="text-lg font-semibold">Vases Family</h3>
+                </div>
+            </div>
+            <div class="relative rounded-lg overflow-hidden shadow">
+                <img src="images/im2.png" class="w-full h-72 object-cover">
+                <div class="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-start p-4 text-white">
+                    <span class="text-sm">Oil Painting</span>
+                    <h3 class="text-lg font-semibold">Camel Portrait</h3>
+                </div>
+            </div>
+            <div class="relative rounded-lg overflow-hidden shadow">
+                <img src="images/im3.jpg" class="w-full h-72 object-cover">
+                <div class="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-start p-4 text-white">
+                    <span class="text-sm">Abstract Painting</span>
+                    <h3 class="text-lg font-semibold">Euforia</h3>
+                </div>
+            </div>
+            <div class="relative rounded-lg overflow-hidden shadow">
+                <img src="images/im4.jpg" class="w-full h-72 object-cover">
+                <div class="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-start p-4 text-white">
+                    <span class="text-sm">Object Design</span>
+                    <h3 class="text-lg font-semibold">Classic Watch</h3>
+                </div>
+            </div>
+            <div class="relative rounded-lg overflow-hidden shadow">
+                <img src="images/im5.jpg" class="w-full h-72 object-cover">
+                <div class="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-start p-4 text-white">
+                    <span class="text-sm">Sculpture</span>
+                    <h3 class="text-lg font-semibold">White Angel</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-gray-100 px-6 py-10 max-w-7xl mx-auto">
+        <div class="flex items-center justify-between mb-6">
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-900">Latest masterpieces</h2>
+            <a href="#" class="text-blue-600 hover:underline">Discover More Masterpieces →</a>
+        </div>
+        <div class="relative">
+            <button id="prevBtn1" aria-label="Previous"
+                class="hidden md:flex absolute -left-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white shadow hover:bg-gray-100 items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    aria-hidden="true">
+                    <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+            </button>
+            <div id="cardContainer" class="flex gap-4 overflow-x-auto scroll-smooth no-scrollbar pb-2">
+                <div class="min-w-[250px] bg-white rounded-lg shadow hover:shadow-lg transition flex-shrink-0">
+                    <div class="w-full">
+                        <img src="images/m1.jpg" class="rounded-t-lg w-full h-48 object-cover" />
+                        <div class="p-4 grid grid-cols-[auto_1fr] gap-4 items-center">
+                            <img src="images/p1.jpg" alt="Melvina Spring" class="w-12 h-12 rounded-full" />
+                            <div class="flex flex-col justify-center">
+                                <h3 class="font-semibold text-sm leading-tight">Flower Decorations</h3>
+                                <p class="text-xs text-gray-500 mt-1">by Melvina Spring</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="min-w-[250px] bg-white rounded-lg shadow hover:shadow-lg transition flex-shrink-0">
+                    <div class="w-full">
+                        <img src="images/m2.jpg" class="rounded-t-lg w-full h-48 object-cover" />
+                        <div class="p-4 grid grid-cols-[auto_1fr] gap-4 items-center">
+                            <img src="images/p2.jpg" alt="John Doe" class="w-12 h-12 rounded-full" />
+                            <div class="flex flex-col justify-center">
+                                <h3 class="font-semibold text-sm leading-tight">Camel Art</h3>
+                                <p class="text-xs text-gray-500 mt-1">by John Doe</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="min-w-[250px] bg-white rounded-lg shadow hover:shadow-lg transition flex-shrink-0">
+                    <div class="w-full">
+                        <img src="images/m3.jpg" class="rounded-t-lg w-full h-48 object-cover" />
+                        <div class="p-4 grid grid-cols-[auto_1fr] gap-4 items-center">
+                            <img src="images/p3.jpg" alt="Rwanda Melflor" class="w-12 h-12 rounded-full" />
+                            <div class="flex flex-col justify-center">
+                                <h3 class="font-semibold text-sm leading-tight">Splash</h3>
+                                <p class="text-xs text-gray-500 mt-1">by Rwanda Melflor</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="min-w-[250px] bg-white rounded-lg shadow hover:shadow-lg transition flex-shrink-0">
+                    <div class="w-full">
+                        <img src="images/m4.jpg" class="rounded-t-lg w-full h-48 object-cover" />
+                        <div class="p-4 grid grid-cols-[auto_1fr] gap-4 items-center">
+                            <img src="images/p1.jpg" alt="Artist 4" class="w-12 h-12 rounded-full" />
+                            <div class="flex flex-col justify-center">
+                                <h3 class="font-semibold text-sm leading-tight">Morning Hue</h3>
+                                <p class="text-xs text-gray-500 mt-1">by Artist 4</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="min-w-[250px] bg-white rounded-lg shadow hover:shadow-lg transition flex-shrink-0">
+                    <div class="w-full">
+                        <img src="images/m2.jpg" class="rounded-t-lg w-full h-48 object-cover" />
+                        <div class="p-4 grid grid-cols-[auto_1fr] gap-4 items-center">
+                            <img src="images/p2.jpg" alt="Artist 5" class="w-12 h-12 rounded-full" />
+                            <div class="flex flex-col justify-center">
+                                <h3 class="font-semibold text-sm leading-tight">Desert Lines</h3>
+                                <p class="text-xs text-gray-500 mt-1">by Artist 5</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="min-w-[250px] bg-white rounded-lg shadow hover:shadow-lg transition flex-shrink-0">
+                    <div class="w-full">
+                        <img src="images/m3.jpg" class="rounded-t-lg w-full h-48 object-cover" />
+                        <div class="p-4 grid grid-cols-[auto_1fr] gap-4 items-center">
+                            <img src="images/p3.jpg" alt="Rwanda Melflor" class="w-12 h-12 rounded-full" />
+                            <div class="flex flex-col justify-center">
+                                <h3 class="font-semibold text-sm leading-tight">Splash</h3>
+                                <p class="text-xs text-gray-500 mt-1">by Rwanda Melflor</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="min-w-[250px] bg-white rounded-lg shadow hover:shadow-lg transition flex-shrink-0">
+                    <div class="w-full">
+                        <img src="images/m4.jpg" class="rounded-t-lg w-full h-48 object-cover" />
+                        <div class="p-4 grid grid-cols-[auto_1fr] gap-4 items-center">
+                            <img src="images/p1.jpg" alt="Artist 4" class="w-12 h-12 rounded-full" />
+                            <div class="flex flex-col justify-center">
+                                <h3 class="font-semibold text-sm leading-tight">Morning Hue</h3>
+                                <p class="text-xs text-gray-500 mt-1">by Artist 4</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="min-w-[250px] bg-white rounded-lg shadow hover:shadow-lg transition flex-shrink-0">
+                    <div class="w-full">
+                        <img src="images/m2.jpg" class="rounded-t-lg w-full h-48 object-cover" />
+                        <div class="p-4 grid grid-cols-[auto_1fr] gap-4 items-center">
+                            <img src="images/p2.jpg" alt="Artist 5" class="w-12 h-12 rounded-full" />
+                            <div class="flex flex-col justify-center">
+                                <h3 class="font-semibold text-sm leading-tight">Desert Lines</h3>
+                                <p class="text-xs text-gray-500 mt-1">by Artist 5</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button id="nextBtn1" aria-label="Next"
+                class="hidden md:flex absolute -right-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white shadow hover:bg-gray-100 items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    aria-hidden="true">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+            </button>
+        </div>
+    </section>
+
+    <section class="bg-gray-100 py-16 px-6 text-center">
+        <h2 class="text-3xl font-bold mb-12">Our Amazing Partners</h2>
+        <div class="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-6 gap-8 mb-12">
+            <div class="flex flex-col items-center">
+                <img src="images/svg/es1.svg" class="w-16 h-16 mb-2">
+                <p class="text-gray-700 font-medium">Nibh viverra</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <img src="images/svg/es2.svg" class="w-16 h-16 mb-2">
+                <p class="text-gray-700 font-medium">Cursus amet</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <img src="images/svg/es3.svg" class="w-16 h-16 mb-2">
+                <p class="text-gray-700 font-medium">Ipsum fermentum 3</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <img src="images/svg/es4.svg" class="w-16 h-16 mb-2">
+                <p class="text-gray-700 font-medium">Quisque euismod</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <img src="images/svg/es5.svg" class="w-16 h-16 mb-2">
+                <p class="text-gray-700 font-medium">Arcu vulputate</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <img src="images/svg/es6.svg" class="w-16 h-16 mb-2">
+                <p class="text-gray-700 font-medium">Cras auctor</p>
+            </div>
+        </div>
+        <button class="bg-red-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-red-700 transition">
+            Find Services
+        </button>
+    </section>
+
+    <section class="bg-[#3b4557]">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 py-16 lg:py-24 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div class="relative flex justify-center order-1 lg:order-2">
+                <img src="images/v1.jpg"
+                    class="absolute top-0 left-0 w-1/2 rounded-lg shadow-lg -translate-x-8 -translate-y-8">
+                <div
+                    class="relative bg-gradient-to-br from-gray-200 to-gray-100 w-[90%] sm:w-[400px] md:w-[500px] aspect-video rounded-xl shadow-2xl flex items-center justify-center">
+                    <img src="images/Desktop.png" class="object-cover rounded-xl shadow-lg rounded-xl">
+                </div>
+                <img src="images/t1.jpg" class="absolute -right-8 top-8 w-28 h-20 rounded-lg shadow-lg object-cover">
+                <img src="images/t2.jpg" class="absolute -bottom-8 left-8 w-28 h-20 rounded-lg shadow-lg object-cover">
+            </div>
+            <div class="text-white order-2 lg:order-1">
+                <h1 class="text-4xl sm:text-5xl font-bold leading-tight mb-6">
+                    Best solutions for your <br /> demanding collection
+                </h1>
+                <p class="text-gray-300 mb-6">
+                    Odio vulputate cras vel lacinia turpis volutpat adipiscing.
+                    Sollicitudin at velit, blandit tempus nunc in.
+                </p>
+                <ul class="space-y-3 mb-8 text-gray-200">
+                    <li class="flex items-start gap-2">
+                        <img src="images/svg/right.svg" class="w-5 h-5 mt-1" />
+                        Interdum volutpat turpis malesuada ac turpis.
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <img src="images/svg/right.svg" class="w-5 h-5 mt-1" />
+                        Tortor ipsum pretium quis nunc.
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <img src="images/svg/right.svg" class="w-5 h-5 mt-1" />
+                        Vitae odio a id purus in.
+                    </li>
+                </ul>
+                <a href="#"
+                    class="inline-block px-6 py-3 rounded-md border border-white text-white hover:bg-white hover:text-[#3b4557] transition font-medium">
+                    Explore Xinder
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-gray-100 py-16">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="bg-white rounded-lg grid grid-cols-1 md:grid-cols-2 gap-8 items-center relative shadow-md">
+                <div class="relative rounded-lg overflow-hidden">
+                    <img src="images/Col-video.png" class="w-full h-full object-cover rounded-lg">
+                    <button class="absolute inset-0 flex items-center justify-center ">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-20 w-20 text-white" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M14.752 11.168l-4.197-2.432A1 1 0 009 9.618v4.764a1 1 0 001.555.832l4.197-2.432a1 1 0 000-1.664z" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="pr-8">
+                    <p class="text-sm text-gray-500 mb-2">
+                        Marie Poirot, Co-Founder <a href="#" class="text-blue-600 font-medium">Art-Gal</a>
+                    </p>
+                    <blockquote class="text-lg text-gray-700 font-medium leading-relaxed">
+                        “Id urna, nisl, ut quam. Diam suspendisse fringilla quam arcu mattis est velit in.
+                        Nibh in purus sit convallis phasellus ut. Neque suspendisse a habitasse commodo.”
+                    </blockquote>
+                </div>
+                <button
+                    class="absolute left-0 md:-left-10 top-1/2 -translate-y-1/2 bg-white shadow-lg w-10 h-10 flex items-center justify-center rounded-full hover:bg-gray-200">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-700" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                    </svg>
+                </button>
+                <button
+                    class="absolute right-0 md:-right-10 top-1/2 -translate-y-1/2 bg-white shadow-lg w-10 h-10 flex items-center justify-center rounded-full hover:bg-gray-200">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-700" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </section>
+
+<section class="bg-[#465066] text-white mx-auto px-6 py-16">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+    <div>
+      <h1 class="text-4xl font-bold mb-4">Be incredible</h1>
+      <p class="text-gray-300 mb-6 leading-relaxed">
+        Nec ultricies eget placerat ultricies eleifend dignissim aliquet sapien. Senectus vestibulum, eget erat at et congue cursus pretium.
+      </p>
+      <button class="px-6 py-3 border-2 border-white rounded-lg hover:bg-white hover:text-[#465066] transition font-medium">
+        Explore Xinder
+      </button>
+    </div>
+    <div class="relative flex justify-center items-center space-x-4">
+      <div class="flex items-center justify-center space-x-4 overflow-hidden w-full">
+    <div class="card flex-shrink-0 w-64 md:w-72 bg-white bg-opacity-20 rounded-xl overflow-hidden transform scale-90 transition-transform duration-500 shadow-lg">
+  <img src="images/m1.jpg" class="w-full h-40 object-cover"/>
+  <div class="p-3 bg-white flex items-center space-x-3">
+    <img src="images/p3.jpg" class="w-12 h-12 object-cover rounded-full"/>
+    <div>
+      <h3 class="text-gray-800 font-semibold text-sm">Artwork 3</h3>
+      <p class="text-gray-500 text-xs">Description here</p>
+    </div>
+  </div>
+</div>
+     <div class="card flex-shrink-0 w-64 md:w-72 bg-white bg-opacity-20 rounded-xl overflow-hidden transform scale-90 transition-transform duration-500 shadow-lg">
+  <img src="images/m2.jpg" class="w-full h-40 object-cover"/>
+  <div class="p-3 bg-white flex items-center space-x-3">
+    <img src="images/p1.jpg" class="w-12 h-12 object-cover rounded-full"/>
+    <div>
+      <h3 class="text-gray-800 font-semibold text-sm">Artwork 3</h3>
+      <p class="text-gray-500 text-xs">Description here</p>
+    </div>
+  </div>
+</div>
+
+  <div class="card flex-shrink-0 w-64 md:w-72 bg-white bg-opacity-20 rounded-xl overflow-hidden transform scale-90 transition-transform duration-500 shadow-lg">
+  <img src="images/m3.jpg" class="w-full h-40 object-cover"/>
+  <div class="p-3 bg-white flex items-center space-x-3">
+    <img src="images/p2.jpg" class="w-12 h-12 object-cover rounded-full"/>
+    <div>
+      <h3 class="text-gray-800 font-semibold text-sm">Artwork 3</h3>
+      <p class="text-gray-500 text-xs">Description here</p>
+    </div>
+  </div>
+</div>
+      </div>
+      <button id="prevBtn" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white text-gray-800 p-3 rounded-full shadow hover:bg-gray-200 transition z-10">
+        &lt;
+      </button>
+      <button id="nextBtn" class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white text-gray-800 p-3 rounded-full shadow hover:bg-gray-200 transition z-10">
+        &gt;
+      </button>
+    </div>
+  </div>
+</section>
+
+    <section class="px-6 py-10 max-w-7xl mx-auto">
+        <div class="flex items-center justify-between mb-8">
+            <h2 class="text-3xl font-bold text-gray-900">Art events</h2>
+            <a href="#" class="text-blue-600 font-medium hover:underline flex items-center gap-1">
+                Explore All Events
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+            </a>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="bg-white rounded-lg shadow overflow-hidden">
+                <div class="relative">
+                    <img src="images/art1.jpg" alt="Wild Horse Event" class="w-full h-52 object-cover">
+                    <span
+                        class="absolute top-3 left-3 bg-purple-100 text-purple-700 text-sm font-medium px-2 py-0.5 rounded">Featured</span>
+                </div>
+                <div class="p-4">
+                    <h3 class="text-lg font-semibold text-gray-900">Wild Horse Event</h3>
+                    <p class="text-sm text-gray-600 mt-2">Egestas elit dui scelerisque ut eu purus aliquam vitae
+                        habitasse.</p>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow overflow-hidden">
+                <div class="relative">
+                    <img src="images/art2.jpg" alt="Great Colors" class="w-full h-52 object-cover">
+                    <span
+                        class="absolute top-3 left-3 bg-green-100 text-green-700 text-sm font-medium px-2 py-0.5 rounded">New</span>
+                </div>
+                <div class="p-4">
+                    <h3 class="text-lg font-semibold text-gray-900">Great Colors</h3>
+                    <p class="text-sm text-gray-600 mt-2">Egestas elit dui scelerisque ut eu purus aliquam vitae
+                        habitasse.</p>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow overflow-hidden">
+                <div class="relative">
+                    <img src="images/art3.jpg" alt="Happy Father's Day" class="w-full h-52 object-cover">
+                    <span
+                        class="absolute top-3 left-3 bg-yellow-100 text-yellow-700 text-sm font-medium px-2 py-0.5 rounded">Coming
+                        Soon</span>
+                </div>
+                <div class="p-4">
+                    <h3 class="text-lg font-semibold text-gray-900">Happy Father’s Day</h3>
+                    <p class="text-sm text-gray-600 mt-2">Egestas elit dui scelerisque ut eu purus aliquam vitae
+                        habitasse.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-[#0B1120] text-white flex flex-col-reverse md:flex-row items-center justify-between  px-5  ">
+
+        <div class="text-center md:text-left px-16 py-4">
+            <h1 class="text-3xl md:text-5xl font-bold leading-tight">
+                Add more masterpieces to <br class="hidden md:block" />
+                your growing collection
+            </h1>
+            <button
+                class="mt-6 px-6 py-3 border border-white rounded-md text-white hover:bg-white hover:text-black transition">
+                Join Now
+            </button>
+        </div>
+
+        <div class="mb-10 md:mb-0 md:ml-4 ">
+            <img src="images/bhaii.png" class="w-64 md:w-76 lg:w-96 mx-auto" />
+        </div>
+
+    </section>
+
+    <footer class="bg-white border-t border-gray-200 pt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6 md:gap-8">
+                <div>
+                    <h3 class="font-semibold text-gray-800 mb-4 flex items-center gap-2">
+                        <img src="images/svg/world.svg" class="w-5 h-5" />
+                        Categories
+                    </h3>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li><a href="#" class="hover:text-gray-800 transition-colors">User Interface</a></li>
+                        <li><a href="#" class="hover:text-gray-800 transition-colors">User Experience</a></li>
+                        <li><a href="#" class="hover:text-gray-800 transition-colors">Digital Media</a></li>
+                        <li><a href="#" class="hover:text-gray-800 transition-colors">Lifestyle</a></li>
+                        <li><a href="#" class="hover:text-gray-800 transition-colors">Programming</a></li>
+                        <li><a href="#" class="hover:text-gray-800 transition-colors">Animation</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-gray-800 mb-4 flex items-center gap-2">
+                        <img src="images/svg/cloud.svg" class="w-5 h-5" />
+                        Product
+                    </h3>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li><a href="#" class="hover:text-gray-800 transition-colors">Pricing</a></li>
+                        <li><a href="#" class="hover:text-gray-800 transition-colors">Overview</a></li>
+                        <li><a href="#" class="hover:text-gray-800 transition-colors">Browse</a></li>
+                        <li><a href="#" class="hover:text-gray-800 transition-colors">Accessibility</a></li>
+                        <li><a href="#" class="hover:text-gray-800 transition-colors">Five</a></li>
+                        <li><a href="#" class="hover:text-gray-800 transition-colors">Changelog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-gray-800 mb-4 flex items-center gap-2">
+                        <img src="images/svg/cog.svg" alt="Solutions" class="w-5 h-5" />
+                        Solutions
+                    </h3>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li><a href="#" class="hover:text-gray-800 transition-colors">Brainstorming</a></li>
+                        <li><a href="#" class="hover:text-gray-800 transition-colors">Ideation</a></li>
+                        <li><a href="#" class="hover:text-gray-800 transition-colors">Wireframing</a></li>
+                        <li><a href="#" class="hover:text-gray-800 transition-colors">Research</a></li>
+                        <li><a href="#" class="hover:text-gray-800 transition-colors">Design</a></li>
+                        <li><a href="#" class="hover:text-gray-800 transition-colors">Concept</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-gray-800 mb-4 flex items-center gap-2">
+                        <img src="images/svg/branch.svg" alt="Resources" class="w-5 h-5" />
+                        Resources
+                    </h3>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li><a href="#" class="hover:text-gray-800 transition-colors">Help Center</a></li>
+                        <li><a href="#" class="hover:text-gray-800 transition-colors">Blog</a></li>
+                        <li><a href="#" class="hover:text-gray-800 transition-colors">Tutorials</a></li>
+                        <li><a href="#" class="hover:text-gray-800 transition-colors">FAQs</a></li>
+                        <li><a href="#" class="hover:text-gray-800 transition-colors">Community</a></li>
+                        <li><a href="#" class="hover:text-gray-800 transition-colors">Events</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-gray-800 mb-4 flex items-center gap-2">
+                        <img src="images/svg/headset.png" class="w-5 h-5" />
+                        Support
+                    </h3>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li><a href="#" class="hover:text-gray-800 transition-colors">Contact Us</a></li>
+                        <li><a href="#" class="hover:text-gray-800 transition-colors">Developers</a></li>
+                        <li><a href="#" class="hover:text-gray-800 transition-colors">Documentation</a></li>
+                        <li><a href="#" class="hover:text-gray-800 transition-colors">Integrations</a></li>
+                        <li><a href="#" class="hover:text-gray-800 transition-colors">Reports</a></li>
+                        <li><a href="#" class="hover:text-gray-800 transition-colors">Webinar</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-gray-800 mb-4 flex items-center gap-2">
+                        <img src="images/svg/codepen.svg" alt="Company" class="w-5 h-5" />
+                        Company
+                    </h3>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li><a href="#" class="hover:text-gray-800 transition-colors">About</a></li>
+                        <li><a href="#" class="hover:text-gray-800 transition-colors">Press</a></li>
+                        <li><a href="#" class="hover:text-gray-800 transition-colors">Events</a></li>
+                        <li><a href="#" class="hover:text-gray-800 transition-colors">Careers</a></li>
+                        <li><a href="#" class="hover:text-gray-800 transition-colors">Customers</a></li>
+                        <li><a href="#" class="hover:text-gray-800 transition-colors">Partners</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div
+                class="mt-12 border-t border-gray-200 pt-6 flex flex-col md:flex-row justify-between items-center text-sm text-gray-600 gap-4">
+                <p>@ 2023 Xinder, Inc. All rights reserved.</p>
+                <div class="flex space-x-4 text-xl text-gray-500">
+                    <img src="images/svg/youtube.svg" class="w-5 h-5" />
+                    <img src="images/svg/v1.svg" class="w-5 h-5" />
+                    <img src="images/svg/v2.svg" class="w-5 h-5" />
+                    <img src="images/svg/instagram.svg" class="w-5 h-5" />
+                </div>
+            </div>
+            <p class="mt-6 text-xs text-gray-500 leading-relaxed">
+                In sed posuere sed ullamcorper feugiat. Lacinia elit neque, ipsum, non. Tellus mattis enim volutpat
+                habitasse.
+                Semper posuere lectus consectetur aliquam et ullamcorper. Dictumst aenean justo fames diam eget volutpat
+                vestibulum elit.
+                Blandit aliquet bibendum pellentesque turpis id penatibus faucibus id nunc. Aenean rhoncus, erat
+                pellentesque eu.
+                Quis morbi condimentum phasellus in ultricies eu amet.
+            </p>
+
+        </div>
+    </footer>
+<script src="scripts.js"></script>
+
+    <style>
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .no-scrollbar {
+            scrollbar-width: none;
+        }
+    </style>
+
+
+</body>
+
+</html>

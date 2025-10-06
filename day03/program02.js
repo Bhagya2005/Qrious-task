@@ -6,10 +6,11 @@ function p2(nums) {
     else neg.push(nums[i]);
   }
   let res = [];
-  for (let i = 0; i < pos.length; i++) {
-    res.push(pos[i]);
-    res.push(neg[i]);
+  let maxLen = Math.max(pos.length, neg.length);
+  for (let i = 0; i < maxLen; i++) {
+    if (i < pos.length) res.push(pos[i]);
+    if (i < neg.length) res.push(neg[i]);
   }
   return res;
 }
-console.log(p2([3, 1, -2, -5, 2, -4])); 
+console.log(p2([-3, 1, -2, -5, -2, -4]));

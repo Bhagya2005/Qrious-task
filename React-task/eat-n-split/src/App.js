@@ -28,7 +28,6 @@ function Button({ children, onClick }) {
     </button>
   );
 }
-
 export default function App() {
   const [friends, setFriends] = useState(initialFriends);
   const [showAddFriend, setShowAddFriend] = useState(false);
@@ -48,6 +47,8 @@ export default function App() {
     setSelectedFriend((cur) => (cur?.id === friend.id ? null : friend));
     setShowAddFriend(false);
   }
+
+  
 
   function handleSplitBill(value) {
     setFriends((friends) =>

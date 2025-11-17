@@ -1,17 +1,19 @@
-import Card from "./components/Card";
+import Card from "./components/Card/Card";
+import CardHeader from "./components/Card/CardHeader";
+import CardBody from "./components/Card/CardBody";
+import CardFooter from "./components/Card/CardFooter";
 
 export default function App() {
   return (
     <div style={{ padding: "30px" }}>
       <Card>
-        <Card.Header>Styled Components Card</Card.Header>
+        <CardHeader>Compound Component</CardHeader>
 
-        <Card.Body>
-          This card is created using the Compound Component Pattern with
-          styled-components.
-        </Card.Body>
+        <CardBody>
+          This card demonstrates compound components.
+        </CardBody>
 
-        <Card.Footer>Updated 2025</Card.Footer>
+        <CardFooter>Footer: 2025</CardFooter>
       </Card>
     </div>
   );

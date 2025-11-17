@@ -1,7 +1,9 @@
-import {
-  UserCardWithWrapper,
-  ProductCardWithWrapper,
-} from "./components/withCard";
+import withCard from "./components/withCard/withCard";
+import UserCard from "./components/withCard/UserCard";
+import ProductCard from "./components/withCard/ProductCard";
+
+const UserCardWithWrapper = withCard(UserCard);
+const ProductCardWithWrapper = withCard(ProductCard);
 
 export default function App() {
   return (

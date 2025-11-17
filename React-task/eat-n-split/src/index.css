@@ -17,6 +17,8 @@ html {
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
+
+
 body {
   height: 100vh;
   color: #495057;
@@ -24,6 +26,7 @@ body {
   align-items: center;
   justify-content: center;
 }
+
 
 .app {
   min-height: 66vh;

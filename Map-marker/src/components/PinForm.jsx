@@ -12,7 +12,6 @@ export default function PinForm({ pin, categories, onSave, onClose }) {
     onSave(formData);
     onClose();
   };
-
   return (
     <div className="form-overlay">
       <div className="form-popup">

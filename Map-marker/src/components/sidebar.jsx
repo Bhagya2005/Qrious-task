@@ -11,13 +11,21 @@ export default function Sidebar({pins,selectedPin,onSelectPin,onDeletePin,onEdit
     const parsedCategories = JSON.parse(storedCategories);
     parsedCategories.forEach(cat => onAddCategory(cat));
   }
-}, []);
+    }, []);
 
   const handleAddCategory = (e) => {
     e.preventDefault();
     onAddCategory(newCat);
     setNewCat({ name: "", color: "#000000" });
     setShowCatForm(false);
+  };
+
+ const deleteCategory = (categoryName) => {
+    const updatedCategories = categories.filter(
+      (cat) => cat.name !== categoryName
+    );
+    localStorage.setItem("categories", JSON.stringify(updatedCategories));
+    window.location.reload();
   };
 
   return (
@@ -28,7 +36,7 @@ export default function Sidebar({pins,selectedPin,onSelectPin,onDeletePin,onEdit
         <select value={filter} onChange={(e) => setFilter(e.target.value)}>
           <option>All</option>
           {categories.map((c) => (
-            <option key={c.name}>{c.name}</option>
+            <option key={c.name}>{c.name} </option>
           ))}
         </select>
 
@@ -91,6 +99,12 @@ export default function Sidebar({pins,selectedPin,onSelectPin,onDeletePin,onEdit
           </li>
         ))}
       </ul>
+        {categories.map((c,pin) => (
+            <li key={c.name} style={{ borderLeft: `4px solid ${pin.color}`, cursor: "pointer" }}>
+            <span style={{ fontWeight: 600 }}>{c.name}</span>
+            <button onClick={() => deleteCategory(c.name)} style={{background:"red", marginLeft:"10px"}}>Delete</button>
+          </li>
+        ))}
 
       {cursorLocation && (
         <p>

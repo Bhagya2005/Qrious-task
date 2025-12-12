@@ -24,3 +24,5 @@ c12-for categories store in locastorage and print through map
 c13-onclick functionality apply entire li
 -----------------------------------------------------------------------------------------
 c14-solve bug on category section
+c15-for categories .some use so that easily store in localstorage 
+c16-added delete functionality for category

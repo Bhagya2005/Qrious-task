@@ -41,10 +41,8 @@ function MapInstanceSaver() {
 
 export default function MapView({ pins, onMapClick, onMouseMove, setSelectedPin }) {
   return (
-    <div className="map-container">
-      
-      <MapContainer center={[20.5937, 78.9629]} zoom={5} className="map"
-       whenCreated={(map) => { window.__leafletMap = map; }}>
+    <div className="map-container">      
+      <MapContainer center={[20.5937, 78.9629]} zoom={5} className="map">
         <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
         <MapClickHandler onMapClick={onMapClick} />
         <MapMouseMoveHandler onMouseMove={onMouseMove} />

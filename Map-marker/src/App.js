@@ -35,7 +35,6 @@ const onAddCategory = (cat) => {
   );
 };
 
-
   useEffect(() => {
     const storedPins = localStorage.getItem("pins");
     if (storedPins) setPins(JSON.parse(storedPins));

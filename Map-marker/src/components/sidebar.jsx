@@ -31,7 +31,6 @@ export default function Sidebar({pins,selectedPin,onSelectPin,onDeletePin,onEdit
   return (
     <aside className="sidebar">
       <h2>Saved Pins</h2>
-
       <div style={{ display: "flex", gap: "10px", alignItems: "center" }}>
         <select value={filter} onChange={(e) => setFilter(e.target.value)}>
           <option>All</option>
@@ -113,6 +112,8 @@ export default function Sidebar({pins,selectedPin,onSelectPin,onDeletePin,onEdit
           Lng: {cursorLocation.lng.toFixed(5)}
         </p>
       )}
+
+          <h2 className="dev-name">Bhagya Patel</h2>
     </aside>
   );
 }

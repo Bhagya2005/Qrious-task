@@ -12,7 +12,7 @@ const getColoredIcon = (color) =>
       </svg>
     `,
     iconSize: [30, 30],
-    iconAnchor: [15, 30],
+    iconAnchor: [15, 30]
   });
 
 function MapClickHandler({ onMapClick }) {

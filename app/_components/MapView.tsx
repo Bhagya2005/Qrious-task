@@ -1,6 +1,7 @@
 "use client";
 
 import {MapContainer,TileLayer,Marker,Popup,useMap,useMapEvent} from "react-leaflet";
+import type { Map as LeafletMap } from "leaflet";
 import { LeafletMouseEvent } from "leaflet";
 import L from "leaflet";
 import { pin } from "../types";
@@ -10,7 +11,9 @@ type MapViewProps = {
   onMapClick?: (lat: number, lng: number) => void;
   onMouseMove?: (lat: number, lng: number) => void;
   setSelectedPin?: (pin: pin | null) => void;
+  mapRef: React.MutableRefObject<LeafletMap | null>;
 };
+
 
 const getColoredIcon = (color: string) =>
   L.divIcon({
@@ -30,27 +33,38 @@ const getColoredIcon = (color: string) =>
     iconAnchor: [15, 30],
   });
 
-function MapClickHandler({onMapClick}: {onMapClick?: (lat: number, lng: number) => void;}) 
-{
-  useMapEvent("click", (e: LeafletMouseEvent) => {
-    onMapClick?.(e.latlng.lat, e.latlng.lng);
-  });
-  return null;
-}
 
-function MapMouseMoveHandler({onMouseMove}: {onMouseMove?: (lat: number, lng: number) => void;})
- {
-  useMapEvent("mousemove", (e: LeafletMouseEvent) => {
-    onMouseMove?.(e.latlng.lat, e.latlng.lng);
-  });
-  return null;
-}
+    function MapClickHandler({
+      onMapClick,
+    }: {
+      onMapClick?: (lat: number, lng: number) => void;
+    }) {
+      useMapEvent("click", (e: LeafletMouseEvent) => {
+        onMapClick?.(e.latlng.lat, e.latlng.lng);
+      });
+      return null;
+    }
 
-function PinMarker({pin,setSelectedPin}: {
-  pin: pin;
-  setSelectedPin?: (pin: pin | null) => void;
-}) {
-  const map = useMap();
+    function MapMouseMoveHandler({
+      onMouseMove,
+    }: {
+      onMouseMove?: (lat: number, lng: number) => void;
+    }) {
+      useMapEvent("mousemove", (e: LeafletMouseEvent) => {
+        onMouseMove?.(e.latlng.lat, e.latlng.lng);
+      });
+      return null;
+    }
+
+
+    function PinMarker({
+      pin,
+      setSelectedPin,
+    }: {
+      pin: pin;
+      setSelectedPin?: (pin: pin | null) => void;
+    }) {
+      const map = useMap();
 
   return (
     <Marker
@@ -76,11 +90,12 @@ function PinMarker({pin,setSelectedPin}: {
     </Marker>
   );
 }
-export default function MapView({pins,onMapClick,onMouseMove,setSelectedPin}: MapViewProps) 
-{
+
+export default function MapView({pins,onMapClick,onMouseMove,setSelectedPin,mapRef}: MapViewProps) {
   return (
     <div className="map-container">
       <MapContainer
+        ref={mapRef}
         center={[20.5937, 78.9629]}
         zoom={5}
         className="map"

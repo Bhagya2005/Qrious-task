@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { pin, Category } from "../types";
+import type { Map as LeafletMap } from "leaflet";
 
 type SidebarProps = {
   pins: pin[];
@@ -14,9 +15,11 @@ type SidebarProps = {
   cursorLocation: { lat: number; lng: number } | null;
   categories: Category[];
   onAddCategory: (cat: Category) => void;
+  mapRef: React.MutableRefObject<LeafletMap | null>;
 };
 
-export default function Sidebar({pins,selectedPin,onSelectPin,onDeletePin,onEditPin,filter,setFilter,cursorLocation,categories,onAddCategory}: SidebarProps) {
+
+export default function Sidebar({pins,selectedPin,onSelectPin,onDeletePin,onEditPin,filter,setFilter,cursorLocation,categories,onAddCategory,mapRef}: SidebarProps) {
   const [showDropdown, setShowDropdown] = useState(false);
   const [showCatForm, setShowCatForm] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
@@ -164,12 +167,18 @@ export default function Sidebar({pins,selectedPin,onSelectPin,onDeletePin,onEdit
               onClick={() => {
                 onSelectPin(pin);
                 setIsOpen(false);
-
-                (window as any).map?.flyTo([pin.lat, pin.lng], 8, {
-                  animate: true,
-                  duration: 1.5,
-                });
-              }}
+                console.log(typeof mapRef)
+                
+              //   window.map?.flyTo([pin.lat, pin.lng], 8, {
+              //     animate: true,
+              //     duration: 1.5,
+              //   });
+              // }}
+               mapRef.current?.flyTo([pin.lat, pin.lng], 8, {
+                    animate: true,
+                    duration: 1.5,
+                  });
+                }}
               className={`p-2 border-l-4 rounded cursor-pointer flex justify-between ${
                 selectedPin?.id === pin.id
                   ? "bg-blue-50"
@@ -217,3 +226,4 @@ export default function Sidebar({pins,selectedPin,onSelectPin,onDeletePin,onEdit
     </>
   );
 }
+

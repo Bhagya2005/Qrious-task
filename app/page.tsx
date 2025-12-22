@@ -5,6 +5,10 @@ import dynamic from "next/dynamic";
 import Sidebar from "./_components/Sidebar";
 import PinForm from "./_components/PinForm";
 import { pin, Category } from "./types";
+import Users from "./_components/Users";
+import { useRef } from "react";
+import type { Map as LeafletMap } from "leaflet";
+
 
 // Leaflet must be dynamically imported (NO SSR)
 const MapView = dynamic(() => import("./_components/MapView"), {
@@ -23,6 +27,7 @@ export default function HomePage() {
     lng: number;
   } | null>(null);
 
+  const mapRef = useRef<LeafletMap | null>(null);
   
   const defaultCategories: Category[] = [
     { name: "General", color: "#ff0000" },
@@ -130,6 +135,7 @@ export default function HomePage() {
         cursorLocation={cursorLocation}
         categories={categories}
         onAddCategory={onAddCategory}
+        mapRef={mapRef}
       />
 
       <MapView
@@ -149,6 +155,7 @@ export default function HomePage() {
           setCursorLocation({ lat, lng })
         }
         setSelectedPin={setSelectedPin}
+        mapRef={mapRef}
       />
 
       {formOpen && formData && (
@@ -164,5 +171,8 @@ export default function HomePage() {
         />
       )}
     </div>
+    // <div className="app">
+    //   <Users/>
+    // </div>
   );
 }

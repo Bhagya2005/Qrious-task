@@ -19,7 +19,7 @@ async function bootstrap() {
 
   app.useGlobalInterceptors(new CommonResponseInterceptor());
   app.useGlobalFilters(new HttpExceptionFilter());
-p
+
   const config = new DocumentBuilder()
       .setTitle('My API')
       .setDescription('API documentation')

@@ -10,8 +10,7 @@ import { PermissionsModule } from './permissions/permissions.module';
 import { User } from './users/users.entity';
 import { Role } from './roles/role.entity';
 import { Permission } from './permissions/permission.entity';
-import { Task01Module } from './task01/task01.module';
-import { Task02Module } from './task02/task02.module';
+
 
 @Module({
   imports: [
@@ -35,8 +34,6 @@ import { Task02Module } from './task02/task02.module';
     UsersModule,
     RolesModule,
     PermissionsModule,
-    Task01Module,
-    Task02Module,
   ],
   controllers: [AppController],
   providers: [AppService],

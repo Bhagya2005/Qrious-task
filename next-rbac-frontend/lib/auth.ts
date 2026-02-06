@@ -9,17 +9,5 @@ export const login = (data: { email: string; password: string }) =>
 export const register = (data: any) =>
   api.post('/auth/register', data);
 
-// export const getMe = async () => {
-//   const token = localStorage.getItem('accessToken');
-//   if (!token) return Promise.reject("No token found");
-
-//   return  axios.post(`${API_URL}/auth/me`, {
-//     headers: { 
-//       Authorization: `Bearer ${token}` 
-//     }
-//   });
-// };
-
-
 export const getMe = () => api.post('/auth/me', {}); 
 

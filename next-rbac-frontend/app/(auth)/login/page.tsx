@@ -13,16 +13,6 @@ export default function LoginPage() {
   const [loading, setLoading] = useState(false);
   const router = useRouter();
 
-//  const handleSubmit = async (e: React.FormEvent) => {
-//   e.preventDefault();
-
-//   if (!email.includes('@')) {
-//     return toast.error('Invalid email format');
-//   }
-//   if (password.length < 6) {
-//     return toast.error('Password must be at least 6 characters');
-//   }
- 
  const handleSubmit = async (e: React.FormEvent) => {
   e.preventDefault();
 
@@ -117,5 +107,4 @@ export default function LoginPage() {
   );
 }
 
-//vo done ho gaay ab field ho handle kane ka karo like password nahi hai peorpeer then passwoed not peorper 
-//required field ka vlaidiaiton already esit , succesfuly login , user not existed ,password and email me indepth validaiton 
+

@@ -8,19 +8,18 @@ import { CommonResponseInterceptor } from './common/interceptors/common-response
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   
-  // 1. Prefix sabse pehle set karein
+
   app.setGlobalPrefix('api'); 
 
-  // 2. CORS fix (chote letters mein 'enableCors')
+
   app.enableCors({
-    origin: 'http://localhost:3000', // Aapka frontend port
+    origin: 'http://localhost:3000', 
     credentials: true,
   });
 
   app.useGlobalInterceptors(new CommonResponseInterceptor());
   app.useGlobalFilters(new HttpExceptionFilter());
-
-  // 3. Swagger Setup
+p
   const config = new DocumentBuilder()
       .setTitle('My API')
       .setDescription('API documentation')
@@ -28,8 +27,7 @@ async function bootstrap() {
       .addBearerAuth() 
       .build();
   const document = SwaggerModule.createDocument(app, config);
-  SwaggerModule.setup('docs', app, document); // 'api' ki jagah 'docs' rakho taaki prefix se clash na ho
-
+  SwaggerModule.setup('docs', app, document); 
   app.useGlobalPipes(
     new ValidationPipe({
       whitelist: true,       

@@ -121,25 +121,22 @@ async delete(id: number) {
 
   if (!role) throw new NotFoundException('Role not found');
 
-  // 1. System roles protection
   const protectedNames = ['ADMIN', 'USER', 'NORMAL USER', 'SUPERADMIN'];
   if (protectedNames.includes(role.name.toUpperCase())) {
     throw new BadRequestException('System roles cannot be deleted');
   }
 
-  // 2. Default role ko dhundne ka foolproof tareeka
+
   let defaultRole = await this.roleRepo.findOne({
     where: [
       { name: 'USER' },
       { name: 'Normal User' },
-      { id: 2 } // Agar naam match nahi hua toh ID 2 try karega
+      { id: 2 } 
     ]
   });
 
-  // 3. Migration logic
   if (role.users.length > 0) {
     if (!defaultRole) {
-      // Agar 'USER' role nahi mila, toh pehla NON-ADMIN role dhundo
       defaultRole = await this.roleRepo.createQueryBuilder("role")
         .where("role.name != :name", { name: 'ADMIN' })
         .andWhere("role.isActive = :active", { active: true })
@@ -154,7 +151,6 @@ async delete(id: number) {
     }
   }
 
-  // 4. Soft delete
   role.isActive = false;
   await this.roleRepo.save(role);
 

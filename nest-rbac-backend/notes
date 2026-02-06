@@ -1,0 +1,24 @@
+1-login => http://localhost:3000/api/auth/login
+2-Register =>http://localhost:3000/api/auth/register
+3-Refresh =>http://localhost:3000/api/auth/refresh
+4-me =>http://localhost:3000/api/auth/me
+5-user get=>http://localhost:3000/api/users
+6-user by ID => http://localhost:3000/api/users/3
+7-user post=>http://localhost:3000/api/users
+8-user delete=>http://localhost:3000/api/users/1
+9-user patch=>http://localhost:3000/api/users/3/assign-role/6
+10-role get=>http://localhost:3000/api/roles
+11-role get by id =>http://localhost:3000/api/roles/1
+12-role post =>http://localhost:3000/api/roles
+13-role patch(for permission)=>http://localhost:3000/api/roles/7/permissions
+14-role delete =>http://localhost:3000/api/roles/7
+15-remove particular permission => http://localhost:3000/api/roles/3/permissions/4
+16-permission get => http://localhost:3000/api/permissions
+17-permission post => http://localhost:3000/api/permissions
+18-permission delete => http://localhost:3000/api/permissions/1
+
+response format :
+
+
+error format :
+
